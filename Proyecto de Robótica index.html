@@ -1,0 +1,3048 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💗 Proyecto Mano Robótica 💗</title>
+
+
+<style>
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:"Trebuchet MS", Arial, sans-serif;
+    background:#fff0f7;
+    color:#513545;
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+header{
+    min-height:500px;
+    padding:100px 30px;
+    text-align:center;
+    color:white;
+
+    background:
+    radial-gradient(circle at 20% 20%, #ffffff55 0 5px, transparent 6px),
+    radial-gradient(circle at 80% 30%, #ffffff55 0 5px, transparent 6px),
+    radial-gradient(circle at 40% 80%, #ffffff55 0 4px, transparent 5px),
+    linear-gradient(135deg,#ff3b91,#ff65a5,#ff9bc4,#ffd0e2);
+
+    border-bottom:10px solid #df2672;
+}
+
+
+header h1{
+    margin-top:80px;
+    font-size:60px;
+    text-shadow:
+        4px 4px 0 #b8205d,
+        0 0 15px #ffffff88;
+}
+
+
+header h2{
+    color:white;
+    border:0;
+    font-size:28px;
+}
+
+
+header p{
+    font-size:21px;
+    font-weight:bold;
+}
+
+
+.corazones{
+    font-size:35px;
+    letter-spacing:15px;
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+nav{
+    background:#df2672;
+    padding:15px;
+    text-align:center;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    box-shadow:0 5px 15px #b95c7f;
+}
+
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+
+    font-weight:bold;
+    font-size:14px;
+
+    padding:10px 13px;
+    margin:4px;
+
+    border-radius:25px;
+
+    transition:.3s;
+}
+
+
+nav a:hover{
+    background:#ffc0d9;
+    color:#8e2456;
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+section{
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    padding:40px;
+
+    background:white;
+
+    border:3px solid #ffc0d9;
+    border-radius:30px;
+
+    box-shadow:
+        0 8px 25px rgba(207,65,120,.16);
+}
+
+
+h2{
+    color:#df2672;
+
+    font-size:32px;
+
+    border-left:10px solid #ff73aa;
+
+    padding-left:15px;
+
+    margin-bottom:30px;
+}
+
+
+h3{
+    color:#d62b70;
+    font-size:23px;
+}
+
+
+h4{
+    color:#ec4a8c;
+    font-size:19px;
+}
+
+
+p{
+    font-size:17px;
+    line-height:1.9;
+}
+
+
+li{
+    font-size:17px;
+    line-height:1.7;
+    margin:12px 0;
+}
+
+
+li::marker{
+    color:#ff4d98;
+}
+
+
+/* =========================================================
+   CAJAS ROSAS
+========================================================= */
+
+.caja{
+    background:linear-gradient(135deg,#fff1f7,#ffe0ec);
+
+    border:3px dashed #ff91b8;
+
+    padding:25px;
+
+    margin:25px 0;
+
+    border-radius:22px;
+}
+
+
+.destacado{
+    background:#ffe4ef;
+
+    border-left:8px solid #ff4d98;
+
+    padding:22px;
+
+    margin:25px 0;
+
+    border-radius:18px;
+}
+
+
+.importante{
+    background:#fff4c9;
+
+    border:3px solid #ffd36a;
+
+    padding:22px;
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.tarjetas{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+
+    margin:25px 0;
+}
+
+
+.tarjeta{
+    background:#fff5f9;
+
+    border:3px solid #ffc3d9;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+
+    background:#ffe5ef;
+
+    box-shadow:0 8px 20px #dfa1bb;
+}
+
+
+.icono{
+    font-size:50px;
+}
+
+
+/* =========================================================
+   MATERIALES
+========================================================= */
+
+.materiales{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:14px;
+}
+
+
+.material{
+    padding:17px;
+
+    background:#fff6fa;
+
+    border:2px solid #ffc7dc;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+
+.material:hover{
+    background:#ffe2ed;
+
+    transform:translateX(4px);
+}
+
+
+/* =========================================================
+   TABLAS
+========================================================= */
+
+table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:25px 0;
+
+    overflow:hidden;
+
+    border-radius:15px;
+}
+
+
+th{
+    background:#df2672;
+
+    color:white;
+
+    padding:16px;
+
+    font-size:17px;
+}
+
+
+td{
+    padding:15px;
+
+    border:1px solid #efb5cb;
+
+    text-align:center;
+}
+
+
+tr:nth-child(even){
+    background:#fff0f6;
+}
+
+
+/* =========================================================
+   FLUJO DEL SISTEMA
+========================================================= */
+
+.flujo{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:35px 0;
+}
+
+
+.paso{
+    background:
+    linear-gradient(135deg,#ff4c98,#ff91bb);
+
+    color:white;
+
+    min-width:145px;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 12px #d99bb4;
+}
+
+
+.flecha{
+    font-size:30px;
+
+    color:#df2672;
+
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   DIAGRAMA
+========================================================= */
+
+.diagrama{
+    background:#fff1f7;
+
+    border:3px solid #ffc1d8;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    font-size:19px;
+
+    line-height:2;
+}
+
+
+/* =========================================================
+   PASOS NUMERADOS
+========================================================= */
+
+.numero{
+    display:inline-block;
+
+    background:#ff4b98;
+
+    color:white;
+
+    width:40px;
+    height:40px;
+
+    line-height:40px;
+
+    text-align:center;
+
+    border-radius:50%;
+
+    margin-right:10px;
+
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   CÓDIGO
+========================================================= */
+
+.codigo{
+    background:#2d2029;
+
+    color:#ffb8d5;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    overflow:auto;
+
+    font-family:Consolas,monospace;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   BARRAS DE INFORMACIÓN
+========================================================= */
+
+.info{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+
+    margin:25px 0;
+}
+
+
+.info div{
+    background:#ffe7f0;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border:2px solid #ffbad3;
+}
+
+
+.info strong{
+    display:block;
+
+    color:#d82970;
+
+    font-size:23px;
+}
+
+
+/* =========================================================
+   PIE
+========================================================= */
+
+footer{
+    margin-top:70px;
+
+    padding:55px 25px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(135deg,#df2672,#ff4b98,#ff83b3);
+}
+
+
+footer h2{
+    color:white;
+
+    border:0;
+}
+
+
+footer p{
+    font-size:17px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:700px){
+
+    header{
+        padding:70px 15px;
+    }
+
+    header h1{
+        font-size:38px;
+    }
+
+    header p{
+        font-size:17px;
+    }
+
+    section{
+        width:94%;
+        padding:23px;
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    .flecha{
+        transform:rotate(90deg);
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PORTADA
+========================================================= -->
+
+<header id="inicio">
+
+<div class="corazones">
+♡ 💗 ♡ 💗 ♡
+</div>
+
+<h1>💗 MANO ROBÓTICA 💗</h1>
+
+<h2>Controlada mediante un guante</h2>
+
+<p>
+✨ Proyecto de Electrónica, Programación y Robótica ✨
+</p>
+
+<p>
+🧤 Sensores de flexión · 💻 Arduino · 📡 NRF24L01 · ⚙️ Servomotores
+</p>
+
+<div class="corazones">
+♡ 💕 ♡ 💕 ♡
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MENÚ
+========================================================= -->
+
+<nav>
+
+<a href="#introduccion">🌸 Introducción</a>
+
+<a href="#objetivos">🎯 Objetivos</a>
+
+<a href="#materiales">🧰 Materiales</a>
+
+<a href="#diseno">📐 Diseño</a>
+
+<a href="#estructura">🔨 Estructura</a>
+
+<a href="#sensores">〰️ Sensores</a>
+
+<a href="#guante">🧤 Guante</a>
+
+<a href="#mecanismo">⚙️ Mecanismo</a>
+
+<a href="#servos">🔧 Servomotores</a>
+
+<a href="#nrf">📡 NRF24L01</a>
+
+<a href="#transmisor">📤 Transmisor</a>
+
+<a href="#receptor">📥 Receptor</a>
+
+<a href="#calibracion">🎚️ Calibración</a>
+
+<a href="#funcionamiento">💗 Funcionamiento</a>
+
+<a href="#pruebas">🔎 Pruebas</a>
+
+<a href="#importancia">🌷 Importancia</a>
+
+<a href="#aprendizajes">📚 Aprendizajes</a>
+
+<a href="#conclusiones">💕 Conclusiones</a>
+
+<a href="#recomendaciones">💡 Recomendaciones</a>
+
+<a href="#resultado">🎀 Resultado</a>
+
+</nav>
+
+
+
+<!-- =========================================================
+     INTRODUCCIÓN
+========================================================= -->
+
+<section id="introduccion">
+
+<h2>🌸 1. Introducción</h2>
+
+
+<div class="caja">
+
+<p>
+
+El presente proyecto consiste en la elaboración de una
+<strong>mano robótica capaz de reproducir los movimientos
+realizados por una persona mediante un guante de control.</strong>
+
+</p>
+
+</div>
+
+
+<p>
+
+El sistema utiliza sensores caseros de flexión, dos placas
+Arduino Nano, módulos de comunicación inalámbrica NRF24L01
+y cinco servomotores SG90.
+
+</p>
+
+
+<p>
+
+La finalidad del proyecto fue integrar conocimientos de
+<strong>electrónica, programación y construcción</strong>
+para desarrollar un prototipo funcional.
+
+</p>
+
+
+<p>
+
+El movimiento de los dedos de la persona es detectado mediante
+los sensores colocados en el guante.
+
+</p>
+
+
+<p>
+
+Esta información es procesada por un Arduino y enviada de
+manera inalámbrica hacia otro Arduino ubicado en la mano robótica.
+
+</p>
+
+
+<p>
+
+Finalmente, los servomotores reciben las instrucciones necesarias
+para mover cada uno de los dedos.
+
+</p>
+
+
+<p>
+
+Durante la elaboración del proyecto se realizaron diferentes
+pruebas con materiales y componentes.
+
+</p>
+
+
+<p>
+
+Algunas de las primeras opciones no proporcionaron los resultados
+esperados, por lo que fue necesario realizar modificaciones
+y buscar alternativas que permitieran mejorar el funcionamiento
+y la resistencia del prototipo.
+
+</p>
+
+
+<div class="destacado">
+
+💗 <strong>Idea principal del proyecto:</strong>
+
+convertir el movimiento realizado por una persona con su mano
+en un movimiento mecánico realizado por una mano robótica.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OBJETIVOS
+========================================================= -->
+
+<section id="objetivos">
+
+<h2>🎯 2. Objetivos</h2>
+
+
+<h3>💗 Objetivo general</h3>
+
+<p>
+
+Construir una mano robótica capaz de reproducir los movimientos
+de los dedos de una persona mediante un guante equipado con
+sensores de flexión y un sistema de comunicación inalámbrica.
+
+</p>
+
+
+<h3>💗 Objetivos específicos</h3>
+
+<ul>
+
+<li>
+Elaborar sensores caseros de flexión capaces de detectar
+el movimiento de los dedos.
+</li>
+
+<li>
+Diseñar y construir la estructura física de la mano robótica.
+</li>
+
+<li>
+Programar los Arduino Nano para transmitir y recibir
+la información de los sensores.
+</li>
+
+<li>
+Implementar una comunicación inalámbrica mediante módulos
+NRF24L01.
+</li>
+
+<li>
+Controlar cinco servomotores SG90 para producir el movimiento
+de los dedos.
+</li>
+
+<li>
+Realizar pruebas y calibraciones para mejorar el funcionamiento
+del prototipo.
+</li>
+
+<li>
+Identificar problemas durante la construcción y encontrar
+soluciones adecuadas.
+</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- =========================================================
+     INFORMACIÓN GENERAL
+========================================================= -->
+
+<section>
+
+<h2>💗 3. Información general del proyecto</h2>
+
+
+<div class="info">
+
+<div>
+<strong>2</strong>
+Arduino Nano
+</div>
+
+<div>
+<strong>5</strong>
+Sensores de flexión
+</div>
+
+<div>
+<strong>5</strong>
+Servomotores
+</div>
+
+<div>
+<strong>2</strong>
+NRF24L01
+</div>
+
+<div>
+<strong>A0–A4</strong>
+Entradas de sensores
+</div>
+
+<div>
+<strong>2–6</strong>
+Pines de servos
+</div>
+
+<div>
+<strong>76</strong>
+Canal utilizado
+</div>
+
+</div>
+
+
+<p>
+
+El sistema está dividido principalmente en dos partes:
+el <strong>guante transmisor</strong> y la
+<strong>mano robótica receptora</strong>.
+
+</p>
+
+
+<p>
+
+El guante contiene los sensores que detectan los movimientos.
+El primer Arduino recibe las lecturas y las transmite mediante
+el NRF24L01.
+
+</p>
+
+
+<p>
+
+En la mano robótica se encuentra el segundo NRF24L01,
+el segundo Arduino y los cinco servomotores.
+
+</p>
+
+
+<div class="diagrama">
+
+🧤 <strong>GUANTE</strong>
+
+<br>
+
+Sensores → Arduino Nano → NRF24L01
+
+<br><br>
+
+📡
+
+<br><br>
+
+NRF24L01 → Arduino Nano → Servomotores
+
+<br>
+
+🤖 <strong>MANO ROBÓTICA</strong>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MATERIALES
+========================================================= -->
+
+<section id="materiales">
+
+<h2>🧰 4. Materiales utilizados</h2>
+
+
+<p>
+
+Para la elaboración del proyecto se utilizaron los siguientes
+materiales:
+
+</p>
+
+
+<div class="materiales">
+
+<div class="material">💻 2 Arduino Nano Tipo C</div>
+
+<div class="material">🔌 2 protoboards de 180 puntos</div>
+
+<div class="material">🔌 1 protoboard de 400 puntos</div>
+
+<div class="material">🔘 1 switch de 6 pines</div>
+
+<div class="material">🔌 2 adaptadores de bornera a Jack DC</div>
+
+<div class="material">🔋 2 baterías de 9 V</div>
+
+<div class="material">🔋 1 broche para batería</div>
+
+<div class="material">🔋 1 soporte de batería</div>
+
+<div class="material">⚙️ 5 servomotores SG90</div>
+
+<div class="material">📡 2 módulos NRF24L01</div>
+
+<div class="material">〰️ 5 resistencias de 33 kΩ</div>
+
+<div class="material">🔋 2 filtros de 100 µF / 16 V</div>
+
+<div class="material">🔋 1 filtro de 470 µF / 16 V</div>
+
+<div class="material">🔗 65 cables de diferentes tamaños</div>
+
+<div class="material">〰️ 5 sensores caseros de flexión</div>
+
+<div class="material">✏️ 1 lápiz 6B</div>
+
+<div class="material">🧤 1 guante de goma</div>
+
+<div class="material">⚡ 1 fuente de voltaje de 110 V a 2500 mA</div>
+
+<div class="material">🪵 Plywood de 4 mm</div>
+
+<div class="material">📦 Cartón</div>
+
+<div class="material">🧵 Piola de nylon</div>
+
+<div class="material">🥤 Sorbetes</div>
+
+<div class="material">🧵 Hilo</div>
+
+<div class="material">🎀 Cinta doble faz</div>
+
+<div class="material">🩷 Pegamento de goma</div>
+
+<div class="material">🔥 Silicona caliente</div>
+
+<div class="material">📄 Papel especial para los sensores</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISEÑO
+========================================================= -->
+
+<section id="diseno">
+
+<h2>📐 5. Diseño de la mano robótica</h2>
+
+
+<p>
+
+Primero se realizó el diseño de la mano robótica tomando
+como referencia la forma de una mano humana.
+
+</p>
+
+
+<p>
+
+Se determinaron las dimensiones y la distribución de los dedos,
+teniendo en cuenta que cada uno debía tener movimiento independiente.
+
+</p>
+
+
+<p>
+
+El diseño permitió establecer la forma de las piezas que
+posteriormente serían elaboradas con plywood de 4 mm
+y otros materiales.
+
+</p>
+
+
+<div class="destacado">
+
+📐 El diseño fue una etapa importante porque permitió determinar
+cómo se distribuirían los dedos y cómo se realizaría posteriormente
+el movimiento de cada uno.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ESTRUCTURA
+========================================================= -->
+
+<section id="estructura">
+
+<h2>🔨 6. Construcción de la estructura</h2>
+
+
+<h3>🪵 Elaboración de las piezas</h3>
+
+<p>
+
+Una vez realizado el diseño, se procedió a elaborar las
+diferentes partes de la mano.
+
+</p>
+
+
+<p>
+
+Se utilizaron principalmente <strong>plywood y cartón</strong>
+para construir la base y los dedos.
+
+</p>
+
+
+<p>
+
+Las piezas fueron cortadas y ensambladas procurando que
+los dedos pudieran realizar movimientos de flexión y regresar
+posteriormente a su posición inicial.
+
+</p>
+
+
+<h3>💗 Objetivo de la estructura</h3>
+
+<p>
+
+La estructura debía permitir que los cinco dedos pudieran
+moverse de manera independiente y que el mecanismo pudiera
+transmitir el movimiento de los servomotores.
+
+</p>
+
+
+<div class="importante">
+
+⚠️ Durante el proyecto fue necesario modificar algunos elementos
+de la estructura porque los materiales utilizados inicialmente
+no siempre respondían de la forma esperada.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SENSORES
+========================================================= -->
+
+<section id="sensores">
+
+<h2>〰️ 7. Elaboración de los sensores de flexión</h2>
+
+
+<p>
+
+Uno de los elementos más importantes del proyecto fueron
+los cinco sensores caseros de flexión.
+
+</p>
+
+
+<p>
+
+Estos sensores fueron elaborados utilizando un material flexible
+y una pista de grafito realizada con un lápiz 6B.
+
+</p>
+
+
+<h3>✏️ Primeras pruebas</h3>
+
+<p>
+
+Al principio se realizaron pruebas utilizando papel común.
+
+</p>
+
+
+<p>
+
+Sin embargo, después de realizar varias flexiones, el papel
+comenzó a deteriorarse debido al recorrido repetitivo del lápiz.
+
+</p>
+
+
+<h3>📄 Segunda prueba</h3>
+
+<p>
+
+Posteriormente se probó con cartulina, pero también presentó
+desgaste después de varias flexiones.
+
+</p>
+
+
+<h3>💕 Material seleccionado</h3>
+
+<p>
+
+Debido a estos inconvenientes, se buscó un papel especial
+que ofreciera mayor resistencia y permitiera realizar las
+flexiones repetidamente sin deteriorarse rápidamente.
+
+</p>
+
+
+<h3>✏️ ¿Por qué se utilizó un lápiz 6B?</h3>
+
+<p>
+
+También se determinó que era importante utilizar un lápiz 6B
+debido a que contiene una mayor cantidad de grafito.
+
+</p>
+
+
+<p>
+
+El grafito permite conducir la electricidad y, al cambiar
+la resistencia del sensor cuando se flexiona, el Arduino
+puede detectar el movimiento del dedo.
+
+</p>
+
+
+<div class="destacado">
+
+💗 Finalmente se elaboraron <strong>cinco sensores</strong>,
+uno para cada dedo del guante.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GUANTE
+========================================================= -->
+
+<section id="guante">
+
+<h2>🧤 8. Instalación de los sensores en el guante</h2>
+
+
+<p>
+
+Después de elaborar los sensores, estos fueron colocados
+sobre los cinco dedos de un guante de goma.
+
+</p>
+
+
+<p>
+
+Cada sensor fue conectado mediante cables a una entrada
+analógica del Arduino Nano.
+
+</p>
+
+
+<h3>📊 Conexiones de los sensores</h3>
+
+
+<table>
+
+<tr>
+
+<th>Dedo</th>
+
+<th>Entrada Arduino</th>
+
+</tr>
+
+<tr>
+
+<td>☝️ Dedo 1</td>
+
+<td>A0</td>
+
+</tr>
+
+<tr>
+
+<td>☝️ Dedo 2</td>
+
+<td>A1</td>
+
+</tr>
+
+<tr>
+
+<td>☝️ Dedo 3</td>
+
+<td>A2</td>
+
+</tr>
+
+<tr>
+
+<td>☝️ Dedo 4</td>
+
+<td>A3</td>
+
+</tr>
+
+<tr>
+
+<td>☝️ Dedo 5</td>
+
+<td>A4</td>
+
+</tr>
+
+</table>
+
+
+<p>
+
+De esta manera, el Arduino puede identificar individualmente
+el movimiento de cada dedo.
+
+</p>
+
+
+<div class="caja">
+
+<strong>🧤 Guante = sistema de entrada</strong>
+
+<p>
+
+El guante es la parte del proyecto donde comienza todo el proceso.
+La persona realiza un movimiento y los sensores convierten
+ese movimiento en información que puede ser leída por Arduino.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MECANISMO
+========================================================= -->
+
+<section id="mecanismo">
+
+<h2>⚙️ 9. Construcción del mecanismo de los dedos</h2>
+
+
+<p>
+
+Para transmitir el movimiento de los servomotores hacia los
+dedos se utilizaron materiales como:
+
+</p>
+
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+
+<div class="icono">🧵</div>
+
+<h3>Hilo</h3>
+
+<p>
+Ayuda a transmitir el movimiento.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">🧵</div>
+
+<h3>Piola de nylon</h3>
+
+<p>
+Se utiliza para producir el movimiento de los dedos.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">🥤</div>
+
+<h3>Sorbetes</h3>
+
+<p>
+Forman parte del mecanismo de transmisión.
+</p>
+
+</div>
+
+</div>
+
+
+<p>
+
+Estos elementos permitieron crear un mecanismo que transmite
+el movimiento generado por cada servomotor hacia el dedo
+correspondiente.
+
+</p>
+
+
+<p>
+
+Al girar el servo, la piola produce el movimiento necesario
+para flexionar el dedo.
+
+</p>
+
+
+<h3>⚠️ Problema encontrado</h3>
+
+<p>
+
+Durante esta etapa se presentó un inconveniente con el cartón
+utilizado en la estructura.
+
+</p>
+
+
+<p>
+
+Al realizar el movimiento de cierre, el material no siempre
+regresaba correctamente a su posición original.
+
+</p>
+
+
+<p>
+
+Para solucionar este problema se aplicó un líquido especial
+que permitió mejorar el retorno del material y conseguir
+un movimiento más adecuado.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVOMOTORES
+========================================================= -->
+
+<section id="servos">
+
+<h2>🔧 10. Instalación de los servomotores</h2>
+
+
+<p>
+
+Se instalaron <strong>cinco servomotores SG90</strong>,
+asignando uno a cada dedo de la mano robótica.
+
+</p>
+
+
+<p>
+
+Los servomotores fueron conectados al segundo Arduino Nano
+mediante los pines digitales:
+
+</p>
+
+
+<table>
+
+<tr>
+
+<th>Servomotor</th>
+
+<th>Pin digital</th>
+
+<th>Función</th>
+
+</tr>
+
+<tr>
+
+<td>Servo 1</td>
+
+<td>2</td>
+
+<td>Movimiento del dedo 1</td>
+
+</tr>
+
+<tr>
+
+<td>Servo 2</td>
+
+<td>3</td>
+
+<td>Movimiento del dedo 2</td>
+
+</tr>
+
+<tr>
+
+<td>Servo 3</td>
+
+<td>4</td>
+
+<td>Movimiento del dedo 3</td>
+
+</tr>
+
+<tr>
+
+<td>Servo 4</td>
+
+<td>5</td>
+
+<td>Movimiento del dedo 4</td>
+
+</tr>
+
+<tr>
+
+<td>Servo 5</td>
+
+<td>6</td>
+
+<td>Movimiento del dedo 5</td>
+
+</tr>
+
+</table>
+
+
+<p>
+
+Cada servo se encarga de controlar el movimiento de un dedo.
+
+</p>
+
+
+<p>
+
+De esta manera, el sistema puede realizar movimientos
+independientes para los cinco dedos.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     NRF
+========================================================= -->
+
+<section id="nrf">
+
+<h2>📡 11. Instalación de los módulos NRF24L01</h2>
+
+
+<p>
+
+Para permitir la comunicación inalámbrica entre el guante
+y la mano robótica se utilizaron dos módulos NRF24L01.
+
+</p>
+
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+
+<div class="icono">📤</div>
+
+<h3>NRF24L01 transmisor</h3>
+
+<p>
+
+Fue colocado en el guante y se configuró como transmisor.
+
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">📥</div>
+
+<h3>NRF24L01 receptor</h3>
+
+<p>
+
+Fue colocado en la mano robótica y se configuró como receptor.
+
+</p>
+
+</div>
+
+</div>
+
+
+<p>
+
+Ambos módulos fueron configurados con la misma dirección
+de comunicación para que pudieran intercambiar información
+correctamente.
+
+</p>
+
+
+<h3>⚠️ Interferencias</h3>
+
+<p>
+
+Durante las primeras pruebas se presentaron interferencias
+cuando se utilizaba el canal 0.
+
+</p>
+
+
+<p>
+
+Estas interferencias estaban relacionadas con otros dispositivos
+electrónicos que se encontraban conectados cerca del proyecto.
+
+</p>
+
+
+<p>
+
+Para solucionar este inconveniente se realizaron pruebas
+utilizando diferentes canales de comunicación.
+
+</p>
+
+
+<div class="destacado">
+
+📡 <strong>Canal final utilizado: 76</strong>
+
+<p>
+
+Con el canal 76 se obtuvo una comunicación más estable
+entre el guante y la mano robótica.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRANSMISOR
+========================================================= -->
+
+<section id="transmisor">
+
+<h2>📤 12. Programación del guante transmisor</h2>
+
+
+<p>
+
+Se programó el primer Arduino Nano para que funcionara
+como <strong>transmisor</strong>.
+
+</p>
+
+
+<p>
+
+Su principal función es leer los cinco sensores de flexión
+colocados en el guante y enviar la información mediante
+el módulo NRF24L01.
+
+</p>
+
+
+<h3>🔄 Lectura de sensores</h3>
+
+<p>
+
+El programa realiza constantemente la lectura de los sensores
+conectados a las entradas:
+
+</p>
+
+
+<div class="info">
+
+<div>
+<strong>A0</strong>
+Sensor 1
+</div>
+
+<div>
+<strong>A1</strong>
+Sensor 2
+</div>
+
+<div>
+<strong>A2</strong>
+Sensor 3
+</div>
+
+<div>
+<strong>A3</strong>
+Sensor 4
+</div>
+
+<div>
+<strong>A4</strong>
+Sensor 5
+</div>
+
+</div>
+
+
+<p>
+
+Los valores obtenidos se almacenan temporalmente y posteriormente
+son enviados al segundo Arduino.
+
+</p>
+
+
+<p>
+
+Para la comunicación inalámbrica se configuró el módulo
+NRF24L01 utilizando una dirección determinada y el
+<strong>canal 76</strong>, seleccionado después de realizar
+pruebas para disminuir las interferencias.
+
+</p>
+
+
+<p>
+
+El Arduino realiza este proceso continuamente, permitiendo
+que los movimientos de los dedos del usuario sean transmitidos
+de manera rápida hacia la mano robótica.
+
+</p>
+
+
+<div class="diagrama">
+
+🧤 Sensores
+
+↓
+
+💻 Arduino Nano transmisor
+
+↓
+
+📡 NRF24L01
+
+↓
+
+📶 Comunicación inalámbrica
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RECEPTOR
+========================================================= -->
+
+<section id="receptor">
+
+<h2>📥 13. Programación de la mano robótica</h2>
+
+
+<p>
+
+El segundo Arduino Nano fue programado para funcionar
+como <strong>receptor</strong>.
+
+</p>
+
+
+<p>
+
+Su función es recibir los valores enviados por el guante
+y utilizarlos para controlar los cinco servomotores.
+
+</p>
+
+
+<h3>📡 Recepción de información</h3>
+
+<p>
+
+Cuando el módulo NRF24L01 recibe los datos, el Arduino
+identifica el valor correspondiente a cada dedo.
+
+</p>
+
+
+<h3>⚙️ Conversión a movimiento</h3>
+
+<p>
+
+Posteriormente, estos valores son convertidos en ángulos
+de movimiento para los servomotores.
+
+</p>
+
+
+<p>
+
+Para lograr un movimiento adecuado se realizaron calibraciones
+para determinar los valores correspondientes a la posición
+recta y a la posición flexionada de cada dedo.
+
+</p>
+
+
+<p>
+
+Estos valores de calibración son diferentes para cada sensor
+debido a que cada uno puede presentar pequeñas variaciones
+en su comportamiento.
+
+</p>
+
+
+<p>
+
+Después de realizar la conversión, el Arduino envía el ángulo
+correspondiente a cada servomotor.
+
+</p>
+
+
+<p>
+
+De esta manera, la mano robótica reproduce los movimientos
+realizados por el usuario.
+
+</p>
+
+
+<div class="destacado">
+
+⚙️ En el caso del <strong>pulgar y el dedo anular</strong>
+fue necesario invertir el sentido de movimiento del servomotor
+para que coincidiera correctamente con la posición física
+de estos dedos.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CALIBRACIÓN
+========================================================= -->
+
+<section id="calibracion">
+
+<h2>🎚️ 14. Calibración de los sensores y servos</h2>
+
+
+<p>
+
+La calibración fue necesaria porque cada sensor puede presentar
+valores diferentes.
+
+</p>
+
+
+<p>
+
+Por esta razón se determinaron los valores correspondientes
+a dos posiciones principales:
+
+</p>
+
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+
+<div class="icono">🖐️</div>
+
+<h3>Posición recta</h3>
+
+<p>
+
+Valor correspondiente al dedo cuando se encuentra extendido.
+
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">✊</div>
+
+<h3>Posición flexionada</h3>
+
+<p>
+
+Valor correspondiente al dedo cuando se encuentra flexionado.
+
+</p>
+
+</div>
+
+</div>
+
+
+<p>
+
+Después de obtener estos valores, el Arduino puede convertir
+la lectura del sensor en un ángulo para controlar el servo.
+
+</p>
+
+
+<p>
+
+Cada sensor necesita una calibración individual porque existen
+pequeñas diferencias entre ellos.
+
+</p>
+
+
+<p>
+
+También fue necesario invertir el sentido de movimiento del
+pulgar y del dedo anular para que el movimiento mecánico
+coincidiera con la posición física de los dedos.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     FUNCIONAMIENTO
+========================================================= -->
+
+<section id="funcionamiento">
+
+<h2>💗 15. Funcionamiento general del sistema</h2>
+
+
+<p>
+
+El funcionamiento completo de la mano robótica se puede
+explicar mediante las siguientes etapas:
+
+</p>
+
+
+<div class="flujo">
+
+<div class="paso">
+👋<br>
+Movimiento<br>
+de los dedos
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+〰️<br>
+Sensores<br>
+de flexión
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+💻<br>
+Arduino<br>
+del guante
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+📡<br>
+NRF24L01<br>
+transmisor
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+📡<br>
+NRF24L01<br>
+receptor
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+💻<br>
+Arduino<br>
+de la mano
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+⚙️<br>
+Servomotores
+</div>
+
+<div class="flecha">→</div>
+
+<div class="paso">
+🤖<br>
+Movimiento<br>
+de los dedos
+</div>
+
+</div>
+
+
+<h3>1️⃣ Movimiento de la persona</h3>
+
+<p>
+
+Cuando el usuario mueve los dedos, los sensores de flexión
+detectan estos cambios y producen diferentes valores eléctricos.
+
+</p>
+
+
+<h3>2️⃣ Lectura de los sensores</h3>
+
+<p>
+
+El primer Arduino lee los valores producidos por los cinco
+sensores conectados a A0, A1, A2, A3 y A4.
+
+</p>
+
+
+<h3>3️⃣ Procesamiento</h3>
+
+<p>
+
+El Arduino organiza la información obtenida de los sensores
+para poder transmitirla.
+
+</p>
+
+
+<h3>4️⃣ Transmisión inalámbrica</h3>
+
+<p>
+
+La información es enviada mediante el NRF24L01 transmisor.
+
+</p>
+
+
+<h3>5️⃣ Recepción</h3>
+
+<p>
+
+El segundo NRF24L01 recibe la información enviada desde
+el guante.
+
+</p>
+
+
+<h3>6️⃣ Procesamiento del segundo Arduino</h3>
+
+<p>
+
+El segundo Arduino recibe los valores y determina el ángulo
+que debe realizar cada servomotor.
+
+</p>
+
+
+<h3>7️⃣ Movimiento mecánico</h3>
+
+<p>
+
+Finalmente, los servomotores mueven los dedos de la mano
+robótica.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRUEBAS
+========================================================= -->
+
+<section id="pruebas">
+
+<h2>🔎 16. Pruebas y correcciones realizadas</h2>
+
+
+<p>
+
+Durante la elaboración del proyecto se realizaron diferentes
+pruebas para comprobar el funcionamiento de los materiales
+y del sistema.
+
+</p>
+
+
+<h3>📄 Problema 1: Papel común</h3>
+
+<p>
+
+El papel común se deterioraba después de realizar varias
+flexiones.
+
+</p>
+
+
+<h3>📋 Problema 2: Cartulina</h3>
+
+<p>
+
+Posteriormente se utilizó cartulina, pero también presentó
+desgaste.
+
+</p>
+
+
+<h3>📄 Solución</h3>
+
+<p>
+
+Se optó por utilizar un papel especial con mayor resistencia.
+
+</p>
+
+
+<h3>✏️ Problema 3: Material conductor</h3>
+
+<p>
+
+También se comprobó que el lápiz utilizado para elaborar
+la pista conductora era importante para el funcionamiento
+del sensor.
+
+</p>
+
+
+<p>
+
+Después de realizar pruebas se determinó que el lápiz 6B
+era adecuado debido a su mayor contenido de grafito.
+
+</p>
+
+
+<h3>🖐️ Problema 4: Mecanismo de los dedos</h3>
+
+<p>
+
+El cartón no siempre regresaba correctamente a su posición
+después de realizar el movimiento de cierre.
+
+</p>
+
+
+<p>
+
+Se realizó una modificación utilizando un líquido especial
+para mejorar el retorno del material.
+
+</p>
+
+
+<h3>📡 Problema 5: Comunicación</h3>
+
+<p>
+
+Durante las pruebas de comunicación inalámbrica se detectaron
+interferencias al utilizar el canal 0 del NRF24L01.
+
+</p>
+
+
+<p>
+
+Se probaron diferentes configuraciones y se estableció
+el canal 76, logrando una comunicación más estable.
+
+</p>
+
+
+<div class="destacado">
+
+💕 Todas estas pruebas fueron importantes porque permitieron
+detectar errores antes de finalizar el prototipo y realizar
+las modificaciones necesarias para mejorar su funcionamiento.
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IMPORTANCIA
+========================================================= -->
+
+<section id="importancia">
+
+<h2>🌷 17. Importancia del proyecto</h2>
+
+
+<p>
+
+La realización de este proyecto fue importante porque permitió
+aplicar de manera práctica conocimientos que normalmente
+se estudian por separado.
+
+</p>
+
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+
+<div class="icono">⚡</div>
+
+<h3>Electrónica</h3>
+
+<p>
+Sensores, resistencias, alimentación y conexiones.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">💻</div>
+
+<h3>Programación</h3>
+
+<p>
+Lectura de sensores y control de servomotores.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">📡</div>
+
+<h3>Comunicación</h3>
+
+<p>
+Transmisión inalámbrica mediante NRF24L01.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">📐</div>
+
+<h3>Diseño</h3>
+
+<p>
+Planificación de la estructura de la mano.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">🔨</div>
+
+<h3>Construcción</h3>
+
+<p>
+Elaboración y ensamblaje del prototipo.
+</p>
+
+</div>
+
+
+<div class="tarjeta">
+
+<div class="icono">🤖</div>
+
+<h3>Robótica</h3>
+
+<p>
+Integración de sensores, programación y movimiento.
+</p>
+
+</div>
+
+</div>
+
+
+<p>
+
+El proyecto permitió comprender cómo un sensor puede detectar
+un movimiento, cómo un Arduino puede procesar esa información
+y cómo los datos pueden ser enviados de forma inalámbrica
+para controlar otro dispositivo.
+
+</p>
+
+
+<p>
+
+También permitió conocer la importancia de realizar pruebas
+antes de obtener un resultado definitivo.
+
+</p>
+
+
+<p>
+
+Durante el proyecto se comprobó que no todos los materiales
+funcionan de la misma manera y que es necesario probar
+diferentes alternativas para encontrar la opción más adecuada.
+
+</p>
+
+
+<p>
+
+Este tipo de proyectos también permite comprender de manera
+práctica algunas de las bases utilizadas en la robótica
+y en los sistemas automatizados.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     APRENDIZAJES
+========================================================= -->
+
+<section id="aprendizajes">
+
+<h2>📚 18. Aprendizajes obtenidos</h2>
+
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+<div class="icono">💻</div>
+<h3>Arduino</h3>
+<p>
+Se aprendió a utilizar y programar Arduino Nano.
+</p>
+</div>
+
+
+<div class="tarjeta">
+<div class="icono">〰️</div>
+<h3>Sensores</h3>
+<p>
+Se comprendió el funcionamiento básico de los sensores
+de flexión.
+</p>
+</div>
+
+
+<div class="tarjeta">
+<div class="icono">⚙️</div>
+<h3>Servomotores</h3>
+<p>
+Se aprendió a utilizar servomotores para producir
+movimientos controlados.
+</p>
+</div>
+
+
+<div class="tarjeta">
+<div class="icono">📡</div>
+<h3>NRF24L01</h3>
+<p>
+Se aprendió a establecer comunicación inalámbrica.
+</p>
+</div>
+
+
+<div class="tarjeta">
+<div class="icono">🎚️</div>
+<h3>Calibración</h3>
+<p>
+Se comprendió la importancia de calibrar cada sensor.
+</p>
+</div>
+
+
+<div class="tarjeta">
+<div class="icono">🔎</div>
+<h3>Solución de problemas</h3>
+<p>
+Se aprendió a identificar errores y buscar soluciones.
+</p>
+</div>
+
+</div>
+
+
+<ul>
+
+<li>
+Se aprendió a utilizar y programar Arduino Nano.
+</li>
+
+<li>
+Se comprendió el funcionamiento básico de los sensores de flexión.
+</li>
+
+<li>
+Se aprendió a utilizar servomotores para producir movimientos controlados.
+</li>
+
+<li>
+Se aprendió a establecer comunicación inalámbrica mediante módulos NRF24L01.
+</li>
+
+<li>
+Se comprendió la importancia de la calibración de los sensores.
+</li>
+
+<li>
+Se aprendió a identificar y solucionar problemas de interferencia
+en la comunicación.
+</li>
+
+<li>
+Se comprobó la importancia de seleccionar correctamente
+los materiales para cada parte del proyecto.
+</li>
+
+<li>
+Se desarrollaron habilidades para realizar pruebas,
+detectar errores y aplicar soluciones.
+</li>
+
+<li>
+Se fortalecieron los conocimientos de electrónica y programación
+mediante una aplicación práctica.
+</li>
+
+<li>
+Se aprendió que un proyecto puede requerir varias pruebas
+y modificaciones antes de conseguir el resultado esperado.
+</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONCLUSIONES
+========================================================= -->
+
+<section id="conclusiones">
+
+<h2>💕 19. Conclusiones</h2>
+
+
+<ol>
+
+<li>
+
+La elaboración de la mano robótica permitió integrar conocimientos
+de electrónica, programación, construcción y comunicación inalámbrica
+para desarrollar un prototipo capaz de reproducir los movimientos
+de los dedos de una persona.
+
+</li>
+
+
+<li>
+
+Durante la fabricación de los sensores de flexión se comprobó
+que la selección de materiales es fundamental para obtener
+un resultado adecuado.
+
+</li>
+
+
+<li>
+
+El papel común y la cartulina presentaron desgaste después
+de varias pruebas, por lo que fue necesario utilizar un
+material más resistente.
+
+</li>
+
+
+<li>
+
+Se determinó que el lápiz 6B era adecuado para la elaboración
+de los sensores debido a su mayor contenido de grafito.
+
+</li>
+
+
+<li>
+
+El grafito permite obtener una superficie conductora y detectar
+los cambios producidos al flexionar el sensor.
+
+</li>
+
+
+<li>
+
+La construcción de la estructura también requirió realizar
+modificaciones.
+
+</li>
+
+
+<li>
+
+El cartón inicialmente no regresaba correctamente a su posición
+después del movimiento de cierre, por lo que fue necesario
+aplicar un líquido especial para mejorar su comportamiento.
+
+</li>
+
+
+<li>
+
+En la comunicación inalámbrica se presentaron interferencias
+al utilizar inicialmente el canal 0.
+
+</li>
+
+
+<li>
+
+Después de realizar diferentes pruebas se utilizó el canal 76,
+obteniendo una comunicación más estable entre el guante
+y la mano robótica.
+
+</li>
+
+
+<li>
+
+La programación permitió establecer una conexión entre los
+sensores del guante y los servomotores de la mano robótica.
+
+</li>
+
+
+<li>
+
+De esta manera, los movimientos realizados por el usuario
+pudieron convertirse en movimientos mecánicos.
+
+</li>
+
+
+<li>
+
+El desarrollo del proyecto permitió comprender que la construcción
+de un prototipo requiere pruebas, correcciones y mejoras continuas.
+
+</li>
+
+
+<li>
+
+Los inconvenientes encontrados durante el proceso ayudaron
+a desarrollar habilidades para analizar problemas y buscar soluciones.
+
+</li>
+
+</ol>
+
+</section>
+
+
+
+<!-- =========================================================
+     RECOMENDACIONES
+========================================================= -->
+
+<section id="recomendaciones">
+
+<h2>💡 20. Recomendaciones</h2>
+
+
+<h3>1. 💗 Realizar pruebas de los materiales</h3>
+
+<p>
+
+Se recomienda comprobar la resistencia, flexibilidad y
+comportamiento de cada material antes de utilizarlo en
+el prototipo completo, especialmente en los sensores
+y en las partes móviles.
+
+</p>
+
+
+<h3>2. 💗 Utilizar materiales adecuados para los sensores</h3>
+
+<p>
+
+Se recomienda utilizar un lápiz 6B para elaborar la parte
+conductora y un material resistente que soporte las
+flexiones repetitivas, evitando materiales que se deterioren
+rápidamente.
+
+</p>
+
+
+<h3>3. 💗 Calibrar cada sensor individualmente</h3>
+
+<p>
+
+Debido a que cada sensor puede presentar valores diferentes,
+es recomendable registrar los valores de la posición recta
+y flexionada de cada dedo antes de realizar la programación
+definitiva.
+
+</p>
+
+
+<h3>4. 💗 Realizar pruebas de comunicación inalámbrica</h3>
+
+<p>
+
+Cuando se utilicen módulos NRF24L01, se recomienda comprobar
+diferentes canales de comunicación si existen interferencias
+con otros dispositivos electrónicos cercanos.
+
+</p>
+
+
+<p>
+
+En este proyecto, el canal 76 permitió obtener una comunicación
+más estable.
+
+</p>
+
+
+<h3>5. 💗 Probar los componentes antes del ensamblaje final</h3>
+
+<p>
+
+Es recomendable comprobar por separado los sensores, Arduino,
+módulos NRF24L01 y servomotores para detectar posibles errores
+antes de unir todo el sistema.
+
+</p>
+
+
+<h3>6. 💗 Dejar espacio para modificaciones</h3>
+
+<p>
+
+En proyectos de este tipo es normal encontrar problemas
+durante las pruebas, por lo que se recomienda realizar
+el montaje de manera que los componentes puedan ajustarse
+o reemplazarse fácilmente.
+
+</p>
+
+
+<h3>7. 💗 Realizar pruebas progresivas</h3>
+
+<p>
+
+Es mejor comprobar primero un dedo, luego varios y finalmente
+los cinco dedos al mismo tiempo.
+
+</p>
+
+
+<p>
+
+Esto facilita la identificación de errores y permite realizar
+las correcciones necesarias.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESULTADO FINAL
+========================================================= -->
+
+<section id="resultado">
+
+<h2>🎀 21. Resultado final</h2>
+
+
+<div class="caja">
+
+<p>
+
+Como resultado, se obtuvo un prototipo de
+<strong>mano robótica controlada mediante un guante.</strong>
+
+</p>
+
+
+<p>
+
+Los sensores de flexión detectan los movimientos realizados
+por los dedos del usuario.
+
+</p>
+
+
+<p>
+
+El Arduino procesa esta información y la transmite mediante
+los módulos NRF24L01.
+
+</p>
+
+
+<p>
+
+El segundo Arduino recibe los datos y controla los cinco
+servomotores encargados de mover los dedos de la mano robótica.
+
+</p>
+
+</div>
+
+
+<div class="diagrama">
+
+🧤
+
+<br>
+
+<strong>GUANTE DE CONTROL</strong>
+
+<br>
+
+↓
+
+<br>
+
+〰️ Sensores de flexión
+
+<br>
+
+↓
+
+<br>
+
+💻 Arduino Nano
+
+<br>
+
+↓
+
+<br>
+
+📡 NRF24L01
+
+<br>
+
+↓
+
+<br>
+
+📡 NRF24L01
+
+<br>
+
+↓
+
+<br>
+
+💻 Arduino Nano
+
+<br>
+
+↓
+
+<br>
+
+⚙️ 5 Servomotores
+
+<br>
+
+↓
+
+<br>
+
+🤖
+
+<br>
+
+<strong>MANO ROBÓTICA</strong>
+
+</div>
+
+
+<div class="destacado">
+
+💗✨ <strong>El proyecto permitió demostrar de manera práctica
+cómo la combinación de sensores, programación, comunicación
+inalámbrica y mecanismos puede utilizarse para crear un sistema
+capaz de reproducir movimientos humanos.</strong> ✨💗
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESUMEN TÉCNICO
+========================================================= -->
+
+<section>
+
+<h2>🩷 22. Resumen técnico del proyecto</h2>
+
+
+<table>
+
+<tr>
+
+<th>Elemento</th>
+
+<th>Función</th>
+
+</tr>
+
+
+<tr>
+
+<td>Arduino Nano 1</td>
+
+<td>
+Lee los sensores del guante y transmite los datos.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Arduino Nano 2</td>
+
+<td>
+Recibe los datos y controla los servomotores.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Sensores de flexión</td>
+
+<td>
+Detectan el movimiento de los dedos.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>NRF24L01 1</td>
+
+<td>
+Transmite la información.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>NRF24L01 2</td>
+
+<td>
+Recibe la información.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Servomotores SG90</td>
+
+<td>
+Mueven los dedos de la mano robótica.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Guante de goma</td>
+
+<td>
+Sirve como soporte para los sensores.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Plywood y cartón</td>
+
+<td>
+Forman parte de la estructura.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Piola, hilo y sorbetes</td>
+
+<td>
+Transmiten el movimiento mecánico.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Lápiz 6B</td>
+
+<td>
+Permite elaborar la pista de grafito de los sensores.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Canal 76</td>
+
+<td>
+Configuración utilizada para obtener una comunicación
+más estable.
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+
+<!-- =========================================================
+     MENSAJE FINAL
+========================================================= -->
+
+<section>
+
+<h2>💗 23. Mensaje final</h2>
+
+
+<div class="destacado">
+
+<p>
+
+🌸 Este proyecto permitió aprender que la robótica no consiste
+solamente en programar, sino también en diseñar, construir,
+probar, equivocarse y buscar soluciones.
+
+</p>
+
+
+<p>
+
+🧤 Cada movimiento realizado con el guante comienza un proceso
+en el que participan los sensores, los Arduino, los módulos
+de comunicación y los servomotores.
+
+</p>
+
+
+<p>
+
+📡 La comunicación inalámbrica permite que la información
+viaje desde el guante hasta la mano robótica.
+
+</p>
+
+
+<p>
+
+⚙️ Finalmente, los servomotores convierten la información
+recibida en movimiento mecánico.
+
+</p>
+
+
+<p>
+
+💕 De esta manera, el proyecto demuestra cómo diferentes
+áreas de la tecnología pueden trabajar juntas para crear
+un sistema capaz de reproducir movimientos humanos.
+
+</p>
+
+</div>
+
+
+<div style="text-align:center;font-size:35px;">
+
+💗 🎀 🧤 🤖 ⚙️ 📡 💻 💕 🌸
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<h2>💗 MANO ROBÓTICA 💗</h2>
+
+<p>
+Controlada mediante un guante
+</p>
+
+<p>
+✨ Proyecto de Electrónica, Programación y Robótica ✨
+</p>
+
+<p>
+🧤 Sensores · 💻 Arduino · 📡 NRF24L01 · ⚙️ Servomotores
+</p>
+
+<p>
+💕 Gracias por visitar nuestro proyecto 💕
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
